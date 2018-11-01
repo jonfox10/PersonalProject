@@ -1,0 +1,129 @@
+.imageStyle{
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: auto;
+    overflow: hidden;
+    img {
+        width: 100vw;
+        overflow: hidden;
+    }
+    
+}
+
+
+.newsHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-color: #FF52D964;
+    z-index: 1; 
+    width: 100vw;
+    height: 40vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: $poppins;
+} 
+#newsHeader {
+    font-family: $poppins;
+    color: $navy;
+    border: 2vw solid $navy;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    opacity: 1;
+    font-size: 11vw;
+    font-weight: bold;
+    padding: 1vw;
+    @include boxShadow(0px);
+    @include textShadow(13px, 0.5)
+
+}
+
+.newsBody{
+    position: relative;
+    margin: 36vw auto auto auto;
+    width: 95vw;
+    // background: radial-gradient($gray 0%, #001242CC 100%);
+    z-index: 3;
+    border-radius: 10px;
+    @include boxShadow(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3vw;
+    // background-color: $color1;
+    // background-image: 
+    // linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2), linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3);
+    // background-repeat: repeat;
+    // radial-gradient($color2-1 9px, transparent 10px),        
+    // repeating-radial-gradient($color2-1 0, $color2-1 4px, transparent 5px, transparent 20px, $color2-1 21px, $color2-1 25px, transparent 26px, transparent 50px);
+    background-color: #001242B3;
+    
+}
+
+.newsPost {
+    width: 80vw;
+    height: auto;
+    padding: 0.5vw 5vw;
+    background-color: #FFFFFFE6;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: .5vw ridge $mintish;
+    border-top: none;
+    font-family: $poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vw 0 0 0;
+    
+    @include boxShadow(1px);
+    
+    .newsTitle{
+        font-family: $poppins;
+        font-size: 3.5vw;
+        font-weight: bold;
+        color: $navy;  
+        text-transform: uppercase;
+        // letter-spacing: .25vw;
+        background-color: $mintish;
+        width: 80vw;
+        height: 7vw;
+        border-radius: 20px 20px 0px 0px;
+        border-bottom: .15vw dotted $mintish;
+        position: relative;
+        margin: -.5vw;
+        padding-top: 1.5vw;
+        text-align: left;
+        text-indent: 2vw;
+
+
+
+    }
+    .newsLine {
+        background-color: $gray;
+        width: 95vw;
+        border: none;
+        position: relative;
+        top: 1.5vw;
+        height: 1vw;
+    }
+}
+.newsPostP {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    text-align: left !important;
+    text-indent: 5vw;
+    padding: 2vw 0;
+    word-spacing: .05vw;
+    
+}

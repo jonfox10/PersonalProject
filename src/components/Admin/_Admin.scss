@@ -1,0 +1,224 @@
+.imageStyle{
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: auto;
+    overflow: hidden;
+    img {
+        width: 100vw;
+        overflow: hidden;
+    }
+    
+}
+
+
+.adminHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-color: rgba(255,255,255,0.6); 
+    z-index: 1; 
+    width: 100vw;
+    height: 59.3vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: $poppins;
+} 
+#adminHeader {
+    font-family: $poppins;
+    color: $navy;
+    border: 2vw solid $navy;
+    // height: 12vw;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    font-size: 11vw;
+    font-weight: bold;
+    padding: 3vw;
+    @include boxShadow(0px);
+    @include textShadow(13px, 0.5)
+
+}
+
+.adminBody{
+    position: relative;
+    margin: 50vw auto 5vw auto;
+    width: 95vw;
+    background-color: #001242CC;
+    z-index: 3;
+    border-radius: 20px;
+    @include boxShadow(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 7.5vw;
+    
+
+}
+
+.accountInfo{
+    width: 80vw;
+    height: 10vw;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $poppins;
+    font-size: 2vw;
+    margin-top: 7.5vw;
+    
+    @include boxShadow(3px);
+    #profilePic{
+        width: 5vw;
+        border-radius: 50%;
+        @include boxShadow(3px);
+    }
+
+}
+
+.newForm {
+    width: 80vw;
+    background-color: white;
+    border-radius: 5px;
+    font-family: $poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.75vw;
+    @include boxShadow(1px);
+    h3 {
+        font-size: 2vw;
+        font-weight: bold;
+        color: $red;
+    }
+    .titleInput {
+        width: 50vw;
+        border: none;
+        border-bottom: 2px solid $red;
+        margin: 2.5vw;
+        font-size: 1vw;
+    }
+    .titleInput:focus{
+        outline: none;
+        border-bottom: 4px solid $mintish;
+        background: rgba(0,0,0,.05); 
+    }
+    .textArea {
+        @extend .titleInput;
+        min-hieght: 10vw;
+    }
+
+    .formBtn {
+        text-transform: uppercase;
+        background-color: white;
+        font-family: $poppins;
+        font-size: 1.5vw;
+        color: $red;
+        @include boxShadow(1px);
+        padding: .5vw 2vw;
+        margin: 2.5vw;
+        border-radius: 5px;
+    }    
+    .formBtn:hover{
+        background-color: $mintish;
+        color: white;
+        // @include neonShadow($mintish);
+        
+    }
+
+    
+    
+}
+.logoutBtn {
+    text-transform: uppercase;
+    background-color: white;
+    font-family: $poppins;
+    font-size: 1.5vw;
+    color: $red;
+    @include boxShadow(1px);
+    padding: .5vw 2vw;
+    margin: 2.5vw;
+    border-radius: 5px;
+}
+.logoutBtn:hover{
+    background-color: $mintish;
+    color: white;
+    // @include neonShadow($mintish);
+    
+}
+
+// style={{padding: '20px', margin: 'auto', backgroundColor: '#c4c4c4', width: '90%', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center',boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
+
+.currentPosts {
+    @extend .newForm;
+    
+    
+}
+.editHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.editBody {
+    @extend .editHeading;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0 7vw 2vw 7vw;
+}
+.editTitle {
+    width: 50vw;
+    border: none;
+    border-bottom: 2px solid $red;
+    margin: 1vw;
+    font-size: 1vw;
+}
+
+.editTitle:focus{
+    outline: none;
+    border-bottom: 4px solid $pink;
+    background: rgba(0,0,0,.05); 
+}
+
+.editContent {
+    @extend .editTitle;
+    min-hieght: 20vw;
+
+}
+
+.editBtn {
+    text-transform: uppercase;
+    background-color: white;
+    font-family: $poppins;
+    font-size: 1.5vw;
+    color: $red;
+    @include boxShadow(1px);
+    padding: .5vw 2vw;
+    margin: 2.5vw;
+    border-radius: 5px;
+}    
+.editBtn:hover{
+    background-color: $pink;
+    color: white;
+    // @include neonShadow($mintish);
+    
+}
+
+hr{
+    border: .25vw solid $red;
+    width: 80%;
+    padding-bottom: .25vw;
+    margin-top: -1vw; 
+}

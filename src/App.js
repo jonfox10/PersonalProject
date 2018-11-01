@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import routes from './routes';
 import './App.css';
-import Home from './components/Home/Home';
 import MenuBar from './components/MenuBar/MenuBar'
+import Footer from './components/Footer/Footer'
+import {HashRouter} from 'react-router-dom'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <MenuBar/>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Hey Krystal, Hope you feel better and have a good day!
-          </p>
-          <Home />
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <HashRouter>
+        <div className="App" >
+          <header className="App-header">
+          <MenuBar/>
+          </header>
+
+          <main>
+            {routes}
+          </main>
+
+        
+          <Footer />
+        </div>
+      </HashRouter>
     );
   }
 }

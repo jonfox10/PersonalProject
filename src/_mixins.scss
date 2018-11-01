@@ -1,0 +1,13 @@
+
+@mixin neonShadow($color) {
+    box-shadow: #FFF 0.5px 1px 1.25px, #FFF 0.5px 1px 2.5px, #FFF 0.5px 01px 3.75px, $color 0.5px 01px 5px, $color 0.5px 01px 7.5px, $color 0.5px 01px 10px, $color 0.5px 01px 12.5px, $color 0.5px 01px 17.5px;
+}
+
+@mixin boxShadow($spread) {
+    box-shadow: 0 4px 6px $spread rgba(0, 0, 0, 0.2), 0 6px 12px $spread rgba(0, 0, 0, 0.19)
+}
+
+@mixin textShadow($blur, $opacity) {
+    text-shadow: 1px 1px $blur rgba(2, 8, 1, $opacity)
+}
+

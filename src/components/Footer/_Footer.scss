@@ -1,0 +1,74 @@
+.footer {
+    width: 100vw;
+    position: relative; 
+    bottom: 0;
+    left: 0;
+    height: 6vw;
+    margin-top: 5px;
+    
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $red;
+
+   
+}
+
+.footerLogo {
+    width: 8vw;
+    height: 8vw;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    
+
+    
+}
+#logo {
+    width: 6vw;
+    fill: $pink;
+    justify-items: center;
+    align-content: center;
+    fill: $pink;
+}
+// .btnContainer{
+//     height: 8vw;
+//     padding-right: 5vw;
+//     background-color: transparent;
+
+// }
+
+.footerBtn{
+    text-decoration: none;
+    color: white;
+    border: none;
+    background-color: transparent;
+    font-family: $poppins;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.footerBtn:hover{
+    color: $pink;
+    box-shadow: #FFF 0px 0px 1.25px, #FFF 0px 0px 2.5px, #FFF 0px 0px 3.75px, $pink 0px 0px 5px, $pink 0px 0px 7.5px, $pink 0px 0px 10px, $pink 0px 0px 12.5px, $pink 0px 0px 17.5px;
+    
+}
+.footerBtn:active{
+    background-color: $navy;
+    color: white;
+}
+
+.footerBarShape {
+    width: 100vw;
+    height: 6vw;
+    background-color: $red;
+    z-index: -1;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+   
+
+}

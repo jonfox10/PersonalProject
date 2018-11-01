@@ -1,0 +1,120 @@
+.menu-container {
+    position: fixed; 
+    top: 0;
+    width: 100;
+    height: 8.25vw;
+    z-index: 5;
+
+}
+
+.menuLogo {
+    background-color: $navy;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 8vw;
+    height: 8vw;
+    z-index: 2;
+    position: absolute;
+    left: 5.75vw;
+    top: 0vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    @include boxShadow(5px);
+    
+}
+
+#logo {
+    width: 6vw;
+    fill: $pink;
+    justify-items: center;
+    align-content: center;
+    fill: $pink;
+}
+
+.listContainer {
+    width: 50vw;
+    height: 8vw;
+    
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4vw;
+    Margin-left: 10vw;
+    height: 7vw;
+    width: 100vw;
+    z-index: 2;
+    list-style-type: none;
+    text-decoration: none;
+    
+    // position: absolute;
+    // bottom: 0;
+    // right: 0;    
+}
+
+li {
+    text-decoration: none;
+    color: white;
+    height: 3vw;
+    padding: 0.25vw 2vw;
+    background-color: none;
+    font-family: $poppins;
+    font-size: 2vw;
+    font-weight: bold;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    // @include boxShadow(5px);
+   
+
+    #link {
+        color: white;
+        font-weight: bold;
+    }
+    
+    
+}
+li:hover{
+    background-color: $pink;
+    color: $red;
+    box-shadow: #FFF 0px 0px .25px, #FFF 0px 0px 1px, #FFF 0px 0px 1.75px, $pink 0px 0px 2.5px, $pink 0px 0px 3.75px, $pink 0px 0px 5px, $pink 0px 0px 6.5px, $pink 0px 0px 9px;
+    #link {
+        color: $red;
+    }
+}
+
+li:active{
+    background-color: $navy;
+    color: white;
+    #link {
+        background-color: $navy;
+        color: white;
+    }
+}
+
+
+.barShape {
+    width: 100vw;
+    height: 8.25vw;
+    clip-path: polygon(100vw 10vw, 100vw 0vw, 70vw 0vw, 9vw 6vw, 0vw 2vw, 0vw 100vw);
+    background-color: $red;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0px 5px 1px $mintish;
+    // @include neonShadow($navy)
+    @include boxShadow(2px);
+    
+    
+    
+    
+
+}
+
+//polygon(964px 418px,960px 271px,693px 270px,186px 371px,1px 298px,1px 420px)
+// style={{display: 'block', width: '100%', height: '150px', backgroundColor: 'mintish', clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0 50%)', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', borderRadius: '0px 0px 0px 0px'}}

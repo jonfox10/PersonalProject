@@ -1,0 +1,30 @@
+@import 'reset';
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+@import './components/MenuBar/MenuBar.scss';
+@import './components/Home/Home.scss';
+@import './components/Video/Video.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Admin/Admin.scss';
+@import './components/Newsfeed/Newsfeed.scss';
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  z-index: -5;
+  background: radial-gradient(ellipse at bottom, $gray 0%, #0B0E0FCC 100%);
+
+}
+
+
+
+
