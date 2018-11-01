@@ -12,6 +12,7 @@ const controller = require('./controller')
 
 // initialize express app
 const app = express();
+app.use( express.static( `build` ) );
 
 
 //destructure from process.env
@@ -44,6 +45,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
 
 
 
