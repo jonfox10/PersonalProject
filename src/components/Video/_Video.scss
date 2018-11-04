@@ -1,3 +1,13 @@
+.videoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45vw;
+    width: 100%;
+    background-image: linear-gradient( rgba(224, 224, 224, 0.705),#0B0E0F00);
+  
+}
+
 .videoStyle {
     position: absolute;
     width: 100vw;

@@ -23,7 +23,9 @@
     left: 0;
     right: 0;
     margin: 0;
-    background-color: rgba(255,255,255,0.6); 
+    // background-color: rgba(255,255,255,0.6); 
+    background-image: linear-gradient( rgba(224, 226, 226, 0.8),#0B0E0F00);
+
     z-index: 1; 
     width: 100vw;
     height: 59.3vw;
@@ -34,8 +36,8 @@
 } 
 #adminHeader {
     font-family: $poppins;
-    color: $navy;
-    border: 2vw solid $navy;
+    color: whitesmoke;
+    border: 2vw solid whitesmoke;
     // height: 12vw;
     display: grid;
     text-align: center;
@@ -51,8 +53,8 @@
 .adminBody{
     position: relative;
     margin: 50vw auto 5vw auto;
-    width: 95vw;
-    background-color: #001242CC;
+    width: 90vw;
+    background-color: whitesmoke;
     z-index: 3;
     border-radius: 20px;
     @include boxShadow(3px);
@@ -61,7 +63,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 7.5vw;
-    
+    // background-image: url('pproject_back_1.jpg');
 
 }
 
@@ -80,7 +82,7 @@
     
     @include boxShadow(3px);
     #profilePic{
-        width: 5vw;
+        width: 10vw;
         border-radius: 50%;
         @include boxShadow(3px);
     }
@@ -97,6 +99,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 3.75vw;
+    padding: 3vw;
     @include boxShadow(1px);
     h3 {
         font-size: 2vw;
@@ -105,19 +108,33 @@
     }
     .titleInput {
         width: 50vw;
+        height: 3vw;
+        font-size: 1.5vw;
         border: none;
         border-bottom: 2px solid $red;
+        border-radius: 10px 10px 0 0;
         margin: 2.5vw;
-        font-size: 1vw;
+        
     }
     .titleInput:focus{
         outline: none;
         border-bottom: 4px solid $mintish;
-        background: rgba(0,0,0,.05); 
+        background: rgba(146, 219, 229, 0.30); 
     }
     .textArea {
-        @extend .titleInput;
-        min-hieght: 10vw;
+        width: 50vw;
+        font-size: 1.5vw;
+        border: none;
+        border-bottom: 2px solid $red;
+        border-radius: 10px 10px 0 0;
+        margin: 2.5vw;
+        height: 3vw;
+    }
+    .textArea:focus{
+        outline: none;
+        border-bottom: 4px solid $mintish;
+        background: rgba(146, 219, 229, 0.30);
+        min-height: 10vw;
     }
 
     .formBtn {
@@ -171,6 +188,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    
 }
 .editBody {
     @extend .editHeading;
@@ -179,23 +197,38 @@
     padding: 0 7vw 2vw 7vw;
 }
 .editTitle {
+    border-radius: 10px 10px 0 0;
     width: 50vw;
+    height: 3vw;
+    font-size: 1.5vw;
     border: none;
-    border-bottom: 2px solid $red;
+    border-bottom: 1px solid $red;
     margin: 1vw;
-    font-size: 1vw;
+
 }
 
 .editTitle:focus{
     outline: none;
     border-bottom: 4px solid $pink;
-    background: rgba(0,0,0,.05); 
+    background: rgba(255, 82, 218, 0.30); 
 }
 
 .editContent {
-    @extend .editTitle;
-    min-hieght: 20vw;
+    min-height: 5vw;
+    border-radius: 10px 10px 0 0;
+    width: 50vw;
+    font-size: 1.5vw;
+    border: none;
+    border-bottom: 1px solid $red;
+    margin: 1vw;
 
+}
+
+.editContent:focus{
+    outline: none;
+    border-bottom: 4px solid $pink;
+    background: rgba(255, 82, 218, 0.30);
+    min-height: 10vw; 
 }
 
 .editBtn {

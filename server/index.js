@@ -72,7 +72,7 @@ app.get('/auth/callback', async (req, res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `${AUTH_PROTOCAL$}://{req.headers.host}/auth/callback`
+        redirect_uri: `${AUTH_PROTOCAL}://{req.headers.host}/auth/callback`
     }
     // post request with code for token
     let tokenRes = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
@@ -105,7 +105,7 @@ app.get('/auth/callback/admin', async (req, res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `${AUTH_PROTOCAL}://${req.headers.host}/auth/callback`
+        redirect_uri: `${AUTH_PROTOCAL}://${req.headers.host}/auth/callback/admin`
     }
     // post request with code for token
     let tokenRes = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
@@ -122,11 +122,14 @@ app.get('/auth/callback/admin', async (req, res) => {
     if (foundAdmin[0]) {
        // found user existing in the db, put returned user on session  
         req.session.user = foundAdmin[0];
+       
     } else {
         // no admin was found by that google id. :(
-        res.status(401).send('Sorry, not an admin.')
+        req.session.user != foundAdmin[0];
+        // .send('Sorry, not an admin.');
+        
     } 
-    res.redirect('/#/admin')
+    res.redirect('/#/admin');
 })
 
 
@@ -150,8 +153,10 @@ app.get('/api/user-data', (req, res) => {
 
 app.get('/auth/logout', (req, res) => {
     req.session.destroy();
-    // res.redirect('http://localhost:3000/#/')
+    res.sendStatus(200);
+    // res.redirect(`https://${REACT_APP_DOMAIN}/v2/logout`)
 })
+
 
 app.post('/api/registration/hs', controller.createHsRegistration);
 app.post('/api/registration/jh', controller.createJhRegistration);

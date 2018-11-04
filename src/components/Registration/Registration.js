@@ -3,6 +3,8 @@ import axios from 'axios'
 // import {updateUser} from './../../ducks/user_reducer';
 // import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
+import regPic from './../../media/pproject_files/pproject_11.jpg'
+
 
 
 class Registration extends Component {
@@ -40,6 +42,7 @@ class Registration extends Component {
         if(this.state.whichEvent === 'hsEvent'){
             axios.post('/api/registration/hs', this.state)
         }
+
     }
 
     handleCancel = (event) => {
@@ -59,60 +62,64 @@ class Registration extends Component {
     render() {
 
         return (
-            <div style={{paddingTop: '500px', height:'2000px', background: `url(media1) no-repeat center fixed`, backgroundSize: 'cover' }}> 
-                {/* <img src={media1} alt='spring fling 2018'/> */}
-                <div>
-
-                    <h1 style={{textAlign: 'center'}}>REGISTRATION</h1>
+            <div>
+                <div className='regImage'>
+                    <img src={regPic} alt='CYN Leaders'/>
+        
                 </div>
-                
-                <div>
-                    <form style={{padding: '20px', margin: 'auto', backgroundColor: '#c4c4c4', width: '90%', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center',boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}>
+                <div className='regHeader'>
+                    <h1 id='regHeader'>RSVP</h1>
+                </div>
+                <div className='regBody'>
+                    <form className='newReg' >
 
                         <label> SELECT THE EVENT: 
-                            <select value={this.state.whichEvent} onChange={this.handleSelect}>
+                            <select 
+                            className='valueSelector'
+                            value={this.state.whichEvent} 
+                            onChange={this.handleSelect}>
                                 <option value="hsEvent">HS Fall Event</option>
                                 <option value="jhEvent">JH Spring Event</option>
                             </select>
                         </label>
                         <input 
+                            className='regInput'
                             name='groupName'
                             type='text'
-                            style={{width: '400px', borderRadius: '10px', margin: '20px', padding: '10px'}}
                             value={this.state.groupName}
                             onChange={this.handleInputChange}
                             placeholder='Group Name...'/>
                         <input 
+                            className='regInput'
                             name='groupLeader'
                             type='text'
-                            style={{width: '400px', borderRadius: '10px', margin: '20px', padding: '10px'}}
                             value={this.state.groupLeader}
                             onChange={this.handleInputChange}
                             placeholder="Leader of Group..."/>
                         <input 
+                            className='regInput'
                             name='leaderEmail'
                             type='text'
-                            style={{width: '400px', borderRadius: '10px', margin: '20px', padding: '10px'}}
                             value={this.state.leaderEmail}
                             onChange={this.handleInputChange}
                             placeholder="Group Leader's email..."/>   
                         <input 
+                            className='regInput'
                             name='leaderPhone'
                             type='text'
-                            style={{width: '400px', borderRadius: '10px', margin: '20px', padding: '10px'}}
                             value={this.state.leaderPhone}
                             onChange={this.handleInputChange}
                             placeholder="Group Leader's cell#..."/>
                         <input 
+                            className='regInput'
                             name='attendanceEstimate'
                             type='number'
-                            style={{width: '400px', borderRadius: '10px', margin: '20px', padding: '10px'}}
                             value={this.state.attendanceEstimate}
                             onChange={this.handleAttendence}
                             placeholder="0"/>
                         
                         
-                        <div>
+                        {/* <div>
                             <label>RECIEVE EMAIL UPDATES:</label>
                             <input 
                                 name='hsEvent'
@@ -125,28 +132,32 @@ class Registration extends Component {
                                 type='checkbox'
                                 checked={this.state.textUpdates}
                                 onChange={this.handleInputChange}/>    
-                        </div>  
-
+                        </div>   */}
+                        <div className='btnContainer'>
                         <button
+                        className='formBtn'
                         onClick={this.submitHandler} 
                         >SUBMIT</button>
 
-                        <a href='http://localhost:6000/auth/logout'>
+                        {/* <a href='http://localhost:6000/auth/logout'>
                         <button>LOGOUT</button>
-                        </a>
-                        <button onClick={this.handleCancel}>CLEAR FORM</button>
-                    </form>
-               </div>
-                    <div style={{margin: '20px', display: 'grid', gridTemplateColumns: 'auto auto', justifyContent: 'center'}}>
-                        <Link to='/hs'><div style={{backgroundColor: '#c4c4c4', borderRadius: '10%', width: '250px', height: '250px', textAlign: 'center', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', margin: '20px', display: 'grid', placeItems: 'center', textDecoration: 'null'}}>
-                        <p>HS FALL FLING DETAILS AND RESOURCES</p>
+                    </a> */}
+                        <button 
+                        className='formBtn'
+                        onClick={this.handleCancel}>CLEAR FORM</button>
                         </div>
-                        </Link>
-                        <Link to='/jh'><div style={{backgroundColor: '#c4c4c4', borderRadius: '10%', width: '250px', height: '250px', textAlign: 'center', boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', margin: '20px', display: 'grid', placeItems: 'center'}}>
+                    </form>
+
+                    <div style={{margin: '2vw', display: 'grid', gridTemplateColumns: 'auto auto', justifyContent: 'center'}}>
+                        <Link to='/hs' style={{textDecoration: 'none'}}><div className='detailsLink'>
+                        <p>HS FALL FLING DETAILS AND RESOURCES</p>
+                        </div></Link>
+                        <Link to='/jh' style={{textDecoration: 'none'}}><div className='detailsLink'>
                         JH SPRING FLING DETAILS AND RESOURCES
                         </div>
                         </Link>
                     </div>
+               </div>
             </div>
 
 

@@ -23,7 +23,7 @@
     left: 0;
     right: 0;
     margin: 0;
-    background-color: #FF52D964;
+    background-image: linear-gradient( #FF52D9,#FF52D900);
     z-index: 1; 
     width: 100vw;
     height: 40vw;
@@ -34,8 +34,8 @@
 } 
 #newsHeader {
     font-family: $poppins;
-    color: $navy;
-    border: 2vw solid $navy;
+    color: whitesmoke;
+    border: 2vw solid whitesmoke;
     display: grid;
     text-align: center;
     align-content: center;
@@ -49,62 +49,86 @@
 }
 
 .newsBody{
+    // position: relative;
+    // margin: 36vw 5vw 5vw 5vw;
+    // width: 90vw;
+    // // background: radial-gradient($gray 0%, #001242CC 100%);
+    // z-index: 3;
+    // border-radius: 10px;
+    // @include boxShadow(8px);
+    // // display: flex;
+    // // flex-direction: column;
+    // // justify-content: space-between;
+    // // align-items: center;
+    // display: flex;
+    // flex-flow: row wrap;
+    // justify-content: space-evenly;
+    // align-items: center;
+    // align-content: space-around;
+    // padding-bottom: 3vw;
+
+    // // background-color: $color1;
+    // // background-image: 
+    // // linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2), linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3);
+    // // background-repeat: repeat;
+    // // radial-gradient($color2-1 9px, transparent 10px),        
+    // // repeating-radial-gradient($color2-1 0, $color2-1 4px, transparent 5px, transparent 20px, $color2-1 21px, $color2-1 25px, transparent 26px, transparent 50px);
+    // background-color: whitesmoke;
     position: relative;
-    margin: 36vw auto auto auto;
-    width: 95vw;
-    // background: radial-gradient($gray 0%, #001242CC 100%);
+    top: 0;
+    left: 0;
+    margin: 36vw auto 5vw auto;
+    width: 90vw;
+    background-color: whitesmoke;
     z-index: 3;
-    border-radius: 10px;
+    border-radius: 20px;
     @include boxShadow(3px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 3vw;
-    // background-color: $color1;
-    // background-image: 
-    // linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2), linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3);
-    // background-repeat: repeat;
-    // radial-gradient($color2-1 9px, transparent 10px),        
-    // repeating-radial-gradient($color2-1 0, $color2-1 4px, transparent 5px, transparent 20px, $color2-1 21px, $color2-1 25px, transparent 26px, transparent 50px);
-    background-color: #001242B3;
-    
+    padding-bottom: 7.5vw;
 }
 
 .newsPost {
-    width: 80vw;
-    height: auto;
-    padding: 0.5vw 5vw;
+    width: 75vw;
+    // padding: 5vw 5vw 2vw 5vw;
     background-color: #FFFFFFE6;
-    border-radius: 20px 20px 0px 0px;
-    border-bottom: .5vw ridge $mintish;
+    border-radius: 0px 30px 50px 0px;
+    // border-bottom: .25vw ridge $mintish;
+    border: 1vw solid #00124260;
     border-top: none;
     font-family: $poppins;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 3vw 0 0 0;
+    align-content: space-around;
+    margin: 5vw 2vw 0 2vw;
     
-    @include boxShadow(1px);
+    
+    // @include boxShadow(1px);
     
     .newsTitle{
         font-family: $poppins;
-        font-size: 3.5vw;
+        font-size: 3vw;
+        min-height: 7vw;
+
         font-weight: bold;
-        color: $navy;  
+        color: whitesmoke;  
         text-transform: uppercase;
         // letter-spacing: .25vw;
-        background-color: $mintish;
-        width: 80vw;
-        height: 7vw;
-        border-radius: 20px 20px 0px 0px;
-        border-bottom: .15vw dotted $mintish;
+        background-color: $navy;
+        width: 75vw;
+        border-radius: 0px 50px 0 0;
+        // border-bottom: .15vw solid $mintish;
         position: relative;
-        margin: -.5vw;
-        padding-top: 1.5vw;
+        margin: -2.5vw;
+        padding: 1.5vw;
         text-align: left;
-        text-indent: 2vw;
+    
+        
+        // @include boxShadow(1px);
 
 
 
@@ -117,13 +141,73 @@
         top: 1.5vw;
         height: 1vw;
     }
+    .newsPostP {
+        font-family: sans-serif;
+        text-transform: none;
+        text-align: left !important;
+        text-indent: auto;
+        padding: 4vw 2vw;
+        word-spacing: .05vw;
+        // height: 10vw;
+        overflow: hidden;
+        font-size: 1.5vw;
+        
+    }
+
 }
-.newsPostP {
-    font-family: sans-serif;
-    text-transform: capitalize;
-    text-align: left !important;
-    text-indent: 5vw;
-    padding: 2vw 0;
-    word-spacing: .05vw;
+
+// @media(max-width: 800px) {
+//     .newsPost {
+//         width: 85vw;
+//         height: auto;
+//         // padding: 5vw 5vw 2vw 5vw;
+//         background-color: #FFFFFFE6;
+//         border-radius: 10px 10px 0px 0px;
+//         border-bottom: .25vw ridge $mintish;
+//         border-top: none;
+//         font-family: $poppins;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         align-content: space-around;
+//         margin: 5vw 1vw 0 1vw;
+        
+        
+//         @include boxShadow(1px);
+        
+//         .newsTitle{
+//             font-family: $poppins;
+//             font-size: 2vw;
+//             font-weight: bold;
+//             color: whitesmoke;  
+//             text-transform: uppercase;
+//             // letter-spacing: .25vw;
+//             background-color: $navy;
+//             width: 75vw;
+//             border-radius: 10px;
+//             border-bottom: .15vw solid $mintish;
+//             position: relative;
+//             margin: -2.5vw;
+//             padding: 1.5vw;
+//             text-align: center;
+            
+//             @include boxShadow(1px);
     
-}
+    
+    
+//         }
+        
+//     }
+    // .newsPostP {
+    //     font-family: sans-serif;
+    //     text-transform: capitalize;
+    //     text-align: left !important;
+    //     text-indent: 5vw;
+    //     padding: 4vw 2vw;
+    //     word-spacing: .05vw;
+    //     max-height: 10vw;
+    //     overflow: auto;
+    //     font-size: 1.5vw;
+        
+    // }

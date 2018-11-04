@@ -1,0 +1,147 @@
+.regImage{
+    @include heroImage(auto);
+}
+
+.regHeader {
+    @include pageHeader(white);
+}
+
+#regHeader {
+    @include headerText(white, 11vw);
+}
+
+.regBody {
+    @include pageBody();
+    
+    .newReg {
+        width: 80vw;
+        background-color: #29062860;
+        outline: 1vw solid #29062860;
+        border: 1vw solid whitesmoke;
+       
+        // border-radius: 5px;
+        font-family: $poppins;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3.75vw;
+        padding: 3vw;
+        // @include boxShadow(1px);
+        h3 {
+            font-size: 2vw;
+            font-weight: bold;
+            color: $red;
+        }
+        .regInput {
+            width: 50vw;
+            height: 3.5vw;
+            font-size: 1.5vw;
+            background-color: whitesmoke;
+            border: none;
+            border-bottom: 2px solid $red;
+            border-radius: 10px 10px 0 0;
+            margin: 1vw 2.5vw;
+        }
+        .regInput:focus{
+            outline: none;
+            border-bottom: 4px solid $mintish;
+            background: rgba(146, 219, 229, 0.30); 
+        }
+        .valueSelector{
+            width: 20vw;
+            margin: 0 5vw;
+            height: 3vw;
+            font-size: 1.5vw;
+            border: none;
+            border-bottom: 2px solid $red;
+            border-radius: 0;
+        }
+        .valueSelector:focus{
+            outline: none;
+            border-bottom: 4px solid $mintish;
+            background: rgba(146, 219, 229, 0.30); 
+        }
+    }
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .formBtn {
+        text-transform: uppercase;
+        background-color: white;
+        font-family: $poppins;
+        font-size: 1.5vw;
+        color: $red;
+        // @include boxShadow(1px);
+        padding: .5vw 2vw;
+        margin: 2.5vw;
+        // border-radius: 5px;
+    }    
+    .formBtn:hover{
+        background-color: $mintish;
+        color: white;
+        // @include neonShadow($mintish);
+        
+    }
+
+}
+
+.detailsLink {
+    text-transform: uppercase;
+    background-color: $red;
+    font-family: $poppins;
+    font-size: 2.25vw;
+    color: whitesmoke;
+    // @include boxShadow(1px);
+    padding: 1vw 2vw;
+    margin: 2.5vw;
+    height: 15vw;
+    width: 15vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    // border-radius: 5px;
+}    
+.detailsLink:hover{
+    // background-color: $mintish;
+    color: white;
+    // @include neonShadow($mintish);
+    @include boxShadow(2px);
+}
+
+
+        //     .textArea {
+            //         width: 50vw;
+            //         font-size: 1.5vw;
+            //         border: none;
+            //         border-bottom: 2px solid $red;
+            //         border-radius: 10px 10px 0 0;
+//         margin: 2.5vw;
+//         height: 3vw;
+//     }
+//     .textArea:focus{
+//         outline: none;
+//         border-bottom: 4px solid $mintish;
+//         background: rgba(146, 219, 229, 0.30);
+//         min-height: 10vw;
+//     }
+
+//     .formBtn {
+//         text-transform: uppercase;
+//         background-color: white;
+//         font-family: $poppins;
+//         font-size: 1.5vw;
+//         color: $red;
+//         @include boxShadow(1px);
+//         padding: .5vw 2vw;
+//         margin: 2.5vw;
+//         border-radius: 5px;
+//     }    
+//     .formBtn:hover{
+//         background-color: $mintish;
+//         color: white;
+//         // @include neonShadow($mintish);
+        
+//     }

@@ -11,3 +11,67 @@
     text-shadow: 1px 1px $blur rgba(2, 8, 1, $opacity)
 }
 
+
+@mixin heroImage($height){
+    width: 100vw;
+    height: $height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: auto;
+    overflow: hidden;
+    img {
+        width: 100vw;
+        overflow: hidden;
+    }    
+}
+
+@mixin pageHeader($color) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0; 
+    background-image: linear-gradient( $color,#0B0E0F00);
+    z-index: 1; 
+    width: 100vw;
+    height: 59.3vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: $poppins;
+} 
+
+@mixin headerText($color, $size) {
+    font-family: $poppins;
+    color: $color;
+    border: 2vw solid $color;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    font-size: $size;
+    font-weight: bold;
+    padding: 3vw;
+    @include boxShadow(0px);
+    @include textShadow(13px, 0.5)
+
+}
+
+@mixin pageBody() {
+    position: relative;
+    margin: 50vw auto 5vw auto;
+    width: 90vw;
+    background-color: whitesmoke;
+    z-index: 3;
+    border-radius: 20px;
+    @include boxShadow(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 7.5vw;
+
+}

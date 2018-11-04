@@ -8,6 +8,7 @@
 @import './components/Footer/Footer.scss';
 @import './components/Admin/Admin.scss';
 @import './components/Newsfeed/Newsfeed.scss';
+@import './components/Registration/Registration.scss';
 
 .App {
   text-align: center;
@@ -21,7 +22,7 @@
   left: 0;
   margin: auto;
   z-index: -5;
-  background: radial-gradient(ellipse at bottom, $gray 0%, #0B0E0FCC 100%);
+  background: radial-gradient(ellipse at bottom, white 0%, #7D827ECC 100%);
 
 }
 

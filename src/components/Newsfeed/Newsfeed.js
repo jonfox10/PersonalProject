@@ -17,8 +17,11 @@ class Newsfeed extends Component {
         console.log(this.state.currentPosts[0].post_title);
     }
 
+    
+
     render() {
             
+
             let posts = this.state.currentPosts.map((post, index) => {
                 return (
                 <div className='newsPost'
@@ -26,7 +29,7 @@ class Newsfeed extends Component {
                     <h4 className='newsTitle'>{post.post_title}</h4>
                     {/* <hr className='newsLine' /> */}
                     {/* <p>POST #: {post.post_id}</p> */}
-                    <p className='newsPostP'>{post.post_content}</p>
+                    <p className='newsPostP' style={{whiteSpace: "pre-wrap"}}>{post.post_content}</p>
                 </div>
                 )
             })

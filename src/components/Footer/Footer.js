@@ -4,7 +4,7 @@ import logo from './../../media/Slice.svg';
 
 export default class Footer extends Component {
 
-    login() {
+    adminLogin() {
         let {REACT_APP_DOMAIN, 
             REACT_APP_CLIENT_ID} = process.env;
 
@@ -23,7 +23,7 @@ export default class Footer extends Component {
                         </object>
                     </div>
                     <div className='btnContainer'>
-                        <button className="footerBtn" onClick={this.login}>ADMIN</button>
+                        <button className="footerBtn" onClick={this.adminLogin}>ADMIN</button>
                     </div>
                     <div className='footerBarShape' >
                     </div>

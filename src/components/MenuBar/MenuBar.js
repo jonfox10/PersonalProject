@@ -34,7 +34,7 @@ export default class MenuBar extends Component {
                             <li ><Link id='link' style={{textDecoration: 'none'}} to='/hs'>HS EVENT</Link></li> 
                             <li ><Link id='link' style={{textDecoration: 'none'}} to='/jh'>JH EVENT</Link></li>
                             <li ><Link id='link' style={{textDecoration: 'none'}} to='/newsfeed'>NEWS</Link></li>
-                            <li >REGISTRATION</li> 
+                            <li ><Link id='link' to='/registration' style={{textDecoration: 'none'}}>REGISTRATION</Link></li> 
                         </ul>
                     </div>
                     <div className='barShape' >

@@ -54,7 +54,7 @@
 .footerBtn:hover{
     color: $pink;
     box-shadow: #FFF 0px 0px 1.25px, #FFF 0px 0px 2.5px, #FFF 0px 0px 3.75px, $pink 0px 0px 5px, $pink 0px 0px 7.5px, $pink 0px 0px 10px, $pink 0px 0px 12.5px, $pink 0px 0px 17.5px;
-    
+    cursor: pointer;
 }
 .footerBtn:active{
     background-color: $navy;
