@@ -109,12 +109,7 @@ li:active{
     left: 0;
     box-shadow: 0 0px 5px 1px $mintish;
     // @include neonShadow($navy)
-    @include boxShadow(2px);
-    
-    
-    
-    
-
+    @include boxShadow(2px);  
 }
 
 //polygon(964px 418px,960px 271px,693px 270px,186px 371px,1px 298px,1px 420px)

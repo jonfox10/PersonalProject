@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import fallFlingPromo from './../../media/FallFlingPromo.mp4'
 import fallFlingScreenshot from './../../media/FallFlingPromoScreenShot.png'
-import heroVideo from './../../media/pproject_backslides(mosaic).mp4'
+import heroVideo from './../../media/pproject_backslides.mp4'
+import fallFlingPromo from './../../media/FallFlingPromo.mp4'
 
 
 export default class Video extends Component {

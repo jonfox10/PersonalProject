@@ -159,6 +159,7 @@ app.get('/auth/logout', (req, res) => {
 
 
 app.post('/api/registration/hs', controller.createHsRegistration);
+// app.post('/api/registration/hsleader', controller.createLeader);
 app.post('/api/registration/jh', controller.createJhRegistration);
 app.get('/api/registration/hs', controller.readHsGroups);
 app.get('/api/registration/jh', controller.readJhGroups);

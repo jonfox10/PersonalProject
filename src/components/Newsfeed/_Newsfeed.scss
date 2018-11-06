@@ -93,10 +93,10 @@
 .newsPost {
     width: 75vw;
     // padding: 5vw 5vw 2vw 5vw;
-    background-color: #FFFFFFE6;
-    border-radius: 0px 30px 50px 0px;
-    // border-bottom: .25vw ridge $mintish;
-    border: 1vw solid #00124260;
+    background-color:whitesmoke;
+    // border-radius: 0px 30px 50px 0px;
+    // // border-bottom: .25vw ridge $mintish;
+    // border: 1vw solid #00124260;
     border-top: none;
     font-family: $poppins;
     display: flex;
@@ -112,20 +112,19 @@
     .newsTitle{
         font-family: $poppins;
         font-size: 3vw;
-        min-height: 7vw;
+        min-height: 8vw;
 
         font-weight: bold;
         color: whitesmoke;  
         text-transform: uppercase;
-        // letter-spacing: .25vw;
         background-color: $navy;
         width: 75vw;
-        border-radius: 0px 50px 0 0;
-        // border-bottom: .15vw solid $mintish;
         position: relative;
-        margin: -2.5vw;
+        margin: .75vw 0;
         padding: 1.5vw;
         text-align: left;
+        border-radius: 0px 025px 0px 0px;
+        border: 1vw solid #001242;
     
         
         // @include boxShadow(1px);
@@ -142,11 +141,14 @@
         height: 1vw;
     }
     .newsPostP {
+        width: 75vw;
+        border-radius: 0px 0px 025px 0px;
+        border: .75vw solid #001242;
         font-family: sans-serif;
         text-transform: none;
         text-align: left !important;
         text-indent: auto;
-        padding: 4vw 2vw;
+        padding: 2vw 2vw;
         word-spacing: .05vw;
         // height: 10vw;
         overflow: hidden;

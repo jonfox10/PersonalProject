@@ -13,11 +13,11 @@ class Registration extends Component {
 
         this.state = {
                 whichEvent: '',
-                groupName: '',
-                groupLeader: '',
-                leaderEmail: '',
-                leaderPhone: '',
-                attendanceEstimate: 0,
+                group_name: '',
+                group_leader_name: '',
+                group_leader_email: '',
+                group_leader_phone: '',
+                group_size: 0,
                 emailUpdates: false,
                 textUpdates: false
         }
@@ -28,19 +28,44 @@ class Registration extends Component {
         console.log(this.state);
     }
     handleSelect = (event) => {
-        this.setState({whichEvent: event.target.value});
+        this.setState({[event.target.name]: event.target.value});
+        console.log(this.state);
     }
     handleAttendence = (event) => {
-        this.setState({attendanceEstimate: event.target.value})
+        this.setState({group_size: event.target.value});
+        console.log(this.state);
     }
 
     submitHandler = (event) => {
         console.log(this.state);
+
         if(this.state.whichEvent === 'jhEvent'){
-            axios.post('/api/registration/jh', this.state)
+            axios.post('/api/registration/jh', this.state).then(response => {
+                this.setState({
+                    whichEvent: '',
+                    group_name: '',
+                    group_leader_name: '',
+                    group_leader_email: '',
+                    group_leader_phone: '',
+                    group_size: 0,
+                    emailUpdates: false,
+                    textUpdates: false
+                })
+            })
         } 
         if(this.state.whichEvent === 'hsEvent'){
-            axios.post('/api/registration/hs', this.state)
+            axios.post('/api/registration/hs', this.state).then(response => {
+                this.setState({
+                    whichEvent: '',
+                    group_name: '',
+                    group_leader_name: '',
+                    group_leader_email: '',
+                    group_leader_phone: '',
+                    group_size: 0,
+                    emailUpdates: false,
+                    textUpdates: false
+                })
+            })
         }
 
     }
@@ -48,11 +73,11 @@ class Registration extends Component {
     handleCancel = (event) => {
         this.setState({
             whichEvent: '',
-            groupName: '',
-            groupLeader: '',
-            leaderEmail: '',
-            leaderPhone: '',
-            attendanceEstimate: 0,
+            group_name: '',
+            group_leader_name: '',
+            group_leader_email: '',
+            group_leader_phone: '',
+            group_size: 0,
             emailUpdates: false,
             textUpdates: false
         })
@@ -71,50 +96,57 @@ class Registration extends Component {
                     <h1 id='regHeader'>RSVP</h1>
                 </div>
                 <div className='regBody'>
+                    
+                    <div className='rsvp_header'>
+                        <h3>RSVP FOR AN EVENT...</h3>
+                    </div>
                     <form className='newReg' >
 
-                        <label> SELECT THE EVENT: 
+                        <label style={{fontSize: '2vw'}}> SELECT THE EVENT: 
                             <select 
                             className='valueSelector'
-                            value={this.state.whichEvent} 
+                            value={this.state.whichEvent}name='whichEvent' 
+                            placeholder='select an event'
                             onChange={this.handleSelect}>
+                                <option value=''></option>
                                 <option value="hsEvent">HS Fall Event</option>
+
                                 <option value="jhEvent">JH Spring Event</option>
                             </select>
                         </label>
                         <input 
                             className='regInput'
-                            name='groupName'
+                            name='group_name'
                             type='text'
-                            value={this.state.groupName}
+                            value={this.state.group_name}
                             onChange={this.handleInputChange}
                             placeholder='Group Name...'/>
                         <input 
                             className='regInput'
-                            name='groupLeader'
+                            name='group_leader_name'
                             type='text'
-                            value={this.state.groupLeader}
+                            value={this.state.group_leader_name}
                             onChange={this.handleInputChange}
                             placeholder="Leader of Group..."/>
                         <input 
                             className='regInput'
-                            name='leaderEmail'
+                            name='group_leader_email'
                             type='text'
-                            value={this.state.leaderEmail}
+                            value={this.state.group_leader_email}
                             onChange={this.handleInputChange}
                             placeholder="Group Leader's email..."/>   
                         <input 
                             className='regInput'
-                            name='leaderPhone'
+                            name='group_leader_phone'
                             type='text'
-                            value={this.state.leaderPhone}
+                            value={this.state.group_leader_phone}
                             onChange={this.handleInputChange}
                             placeholder="Group Leader's cell#..."/>
                         <input 
                             className='regInput'
-                            name='attendanceEstimate'
+                            name='group_size'
                             type='number'
-                            value={this.state.attendanceEstimate}
+                            value={this.state.group_size}
                             onChange={this.handleAttendence}
                             placeholder="0"/>
                         
@@ -149,10 +181,10 @@ class Registration extends Component {
                     </form>
 
                     <div style={{margin: '2vw', display: 'grid', gridTemplateColumns: 'auto auto', justifyContent: 'center'}}>
-                        <Link to='/hs' style={{textDecoration: 'none'}}><div className='detailsLink'>
+                        <Link to='/hs' style={{textDecoration: 'none'}}><div className='detailsLinkLeft'>
                         <p>HS FALL FLING DETAILS AND RESOURCES</p>
                         </div></Link>
-                        <Link to='/jh' style={{textDecoration: 'none'}}><div className='detailsLink'>
+                        <Link to='/jh' style={{textDecoration: 'none'}}><div className='detailsLinkRight'>
                         JH SPRING FLING DETAILS AND RESOURCES
                         </div>
                         </Link>

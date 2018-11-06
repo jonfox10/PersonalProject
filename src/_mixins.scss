@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    margin: auto;
+    // margin: auto;
     overflow: hidden;
     img {
         width: 100vw;
@@ -31,9 +31,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin: 0; 
     background-image: linear-gradient( $color,#0B0E0F00);
     z-index: 1; 
@@ -62,7 +59,10 @@
 
 @mixin pageBody() {
     position: relative;
-    margin: 50vw auto 5vw auto;
+    overflow: scroll;
+    top: 0;
+    left: 0;
+    margin: 57vw auto 5vw auto;
     width: 90vw;
     background-color: whitesmoke;
     z-index: 3;
@@ -72,6 +72,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 7.5vw;
+    padding-bottom: 5vw;
+    padding-top: 5vw;
 
 }

@@ -70,8 +70,6 @@
 .accountInfo{
     width: 80vw;
     height: 10vw;
-    background-color: white;
-    border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -79,25 +77,29 @@
     font-family: $poppins;
     font-size: 2vw;
     margin-top: 7.5vw;
-    
+    color: whitesmoke;  
+    background-color: $navy;
+    border-radius: 0px 25px 25px 0;
+        
     @include boxShadow(3px);
     #profilePic{
         width: 10vw;
         border-radius: 50%;
-        @include boxShadow(3px);
+        @include boxShadow(1px);
     }
 
 }
 
 .newForm {
     width: 80vw;
-    background-color: white;
-    border-radius: 5px;
+    height: auto;
+    background-color: whitesmoke;
+    border-radius: 0px 25px 0px 0;    
     font-family: $poppins;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     margin-top: 3.75vw;
     padding: 3vw;
     @include boxShadow(1px);
@@ -105,6 +107,35 @@
         font-size: 2vw;
         font-weight: bold;
         color: $red;
+    }
+    .newForm_heading {
+        font-family: $poppins;
+        font-size: 3vw;
+        min-height: 8vw;
+        font-weight: bold;
+        color: whitesmoke;  
+        text-transform: uppercase;
+        background-color: $navy;
+        width: 75vw;
+        position: relative;
+        margin: .5vw 0.5vw;
+        padding: 1vw;
+        text-align: left;
+        border-radius: 0px 025px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1vw solid #001242;
+    }
+    .newForm_body {
+        width: 75vw;
+        border-radius: 0px 0px 025px 0px;
+        border: .75vw solid #001242;
+        padding: 2vw 9.3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .titleInput {
         width: 50vw;
@@ -114,6 +145,7 @@
         border-bottom: 2px solid $red;
         border-radius: 10px 10px 0 0;
         margin: 2.5vw;
+        background-color: whitesmoke;
         
     }
     .titleInput:focus{
@@ -129,6 +161,7 @@
         border-radius: 10px 10px 0 0;
         margin: 2.5vw;
         height: 3vw;
+        background-color: whitesmoke;
     }
     .textArea:focus{
         outline: none;
@@ -139,31 +172,29 @@
 
     .formBtn {
         text-transform: uppercase;
-        background-color: white;
+        background-color: whitesmoke;
         font-family: $poppins;
         font-size: 1.5vw;
-        color: $red;
-        @include boxShadow(1px);
+        color: $navy;
         padding: .5vw 2vw;
-        margin: 2.5vw;
+        margin: 1.5vw;
         border-radius: 5px;
+
     }    
     .formBtn:hover{
         background-color: $mintish;
         color: white;
+        @include boxShadow(2px);
         // @include neonShadow($mintish);
         
-    }
-
-    
-    
+    } 
 }
 .logoutBtn {
     text-transform: uppercase;
     background-color: white;
     font-family: $poppins;
     font-size: 1.5vw;
-    color: $red;
+    color: $navy;
     @include boxShadow(1px);
     padding: .5vw 2vw;
     margin: 2.5vw;
@@ -176,13 +207,39 @@
     
 }
 
-// style={{padding: '20px', margin: 'auto', backgroundColor: '#c4c4c4', width: '90%', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center',boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
-
 .currentPosts {
     @extend .newForm;
     
-    
 }
+.editorTitle {
+    font-family: $poppins;
+    font-size: 4vw;
+    min-height: 8vw;
+    font-weight: bold;
+    color: whitesmoke;  
+    text-transform: uppercase;
+    background-color: $navy;
+    width: 75vw;
+    position: relative;
+    margin: .75vw 0;
+    padding: 1.5vw;
+    text-align: left;
+    border-radius: 0px 025px 0px 0px;
+    border: 1vw solid #001242;
+}
+.editMain {
+    width: 75vw;
+    border-radius: 0px 0px 025px 0px;
+    border: .75vw solid #001242;
+    padding: 2vw 9.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// style={{padding: '20px', margin: 'auto', backgroundColor: '#c4c4c4', width: '90%', borderRadius: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center',boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
+
 .editHeading {
     display: flex;
     flex-direction: row;
@@ -236,8 +293,8 @@
     background-color: white;
     font-family: $poppins;
     font-size: 1.5vw;
-    color: $red;
-    @include boxShadow(1px);
+    color: $navy;
+    // @include boxShadow(1px);
     padding: .5vw 2vw;
     margin: 2.5vw;
     border-radius: 5px;
@@ -245,13 +302,15 @@
 .editBtn:hover{
     background-color: $pink;
     color: white;
+    @include boxShadow(1px);
     // @include neonShadow($mintish);
     
 }
 
 hr{
-    border: .25vw solid $red;
-    width: 80%;
+    height: .5vw;
+    background-color: $navy;
+    width: 60vw;
     padding-bottom: .25vw;
     margin-top: -1vw; 
 }

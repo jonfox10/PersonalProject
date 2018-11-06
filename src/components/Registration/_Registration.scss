@@ -10,101 +10,141 @@
     @include headerText(white, 11vw);
 }
 
+.rsvp_header {
+    font-family: $poppins;
+    font-size: 3.5vw;
+    min-height: 10vw;
+    font-weight: bold;
+    color: whitesmoke;  
+    text-transform: uppercase;
+    background-color: $navy;
+    width: 80vw;
+    position: relative;
+    margin-bottom: .75vw;
+    // padding: 1vw;
+    text-align: left;
+    border-radius: 0px 025px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1vw solid #001242;
+}
 .regBody {
     @include pageBody();
+}
     
-    .newReg {
-        width: 80vw;
-        background-color: #29062860;
-        outline: 1vw solid #29062860;
-        border: 1vw solid whitesmoke;
-       
-        // border-radius: 5px;
-        font-family: $poppins;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 3.75vw;
-        padding: 3vw;
-        // @include boxShadow(1px);
-        h3 {
-            font-size: 2vw;
-            font-weight: bold;
-            color: $red;
-        }
-        .regInput {
-            width: 50vw;
-            height: 3.5vw;
-            font-size: 1.5vw;
-            background-color: whitesmoke;
-            border: none;
-            border-bottom: 2px solid $red;
-            border-radius: 10px 10px 0 0;
-            margin: 1vw 2.5vw;
-        }
-        .regInput:focus{
-            outline: none;
-            border-bottom: 4px solid $mintish;
-            background: rgba(146, 219, 229, 0.30); 
-        }
-        .valueSelector{
-            width: 20vw;
-            margin: 0 5vw;
-            height: 3vw;
-            font-size: 1.5vw;
-            border: none;
-            border-bottom: 2px solid $red;
-            border-radius: 0;
-        }
-        .valueSelector:focus{
-            outline: none;
-            border-bottom: 4px solid $mintish;
-            background: rgba(146, 219, 229, 0.30); 
-        }
-    }
-    .btnContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .formBtn {
-        text-transform: uppercase;
-        background-color: white;
-        font-family: $poppins;
-        font-size: 1.5vw;
+.newReg {
+    width: 80vw;
+    border-radius: 0px 0px 025px 0px;
+    border: .75vw solid #001242;
+    padding: 2.5vw 0;
+    margin: .5vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // @include boxShadow(1px);
+    h3 {
+        font-size: 2vw;
+        font-weight: bold;
         color: $red;
-        // @include boxShadow(1px);
-        padding: .5vw 2vw;
-        margin: 2.5vw;
-        // border-radius: 5px;
-    }    
-    .formBtn:hover{
-        background-color: $mintish;
-        color: white;
-        // @include neonShadow($mintish);
-        
     }
-
+    .regInput {
+        width: 50vw;
+        height: 3.5vw;
+        font-size: 1.5vw;
+        background-color: whitesmoke;
+        border: none;
+        border-bottom: 2px solid $red;
+        border-radius: 10px 10px 0 0;
+        margin: 1vw 2.5vw;
+    }
+    .regInput:focus{
+        outline: none;
+        border-bottom: 2px solid $mintish;
+        background: rgba(146, 219, 229, 0.30); 
+    }
+    .valueSelector{
+        width: 20vw;
+        margin: 0 5vw;
+        height: 3vw;
+        font-size: 1.5vw;
+        border: none;
+        border-bottom: 2px solid $red;
+        border-radius: 0;
+    }
+    .valueSelector:focus{
+        outline: none;
+        border-bottom: 2px solid $mintish;
+        background: rgba(146, 219, 229, 0.30); 
+    }
+}
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.formBtn {
+    text-transform: uppercase;
+    background-color: white;
+    font-family: $poppins;
+    font-size: 1.5vw;
+    color: $red;
+    // @include boxShadow(1px);
+    // padding: .5vw 2vw;
+    margin: 2.5vw 0 0 0;
+    // border-radius: 5px;
+}    
+.formBtn:hover{
+    background-color: $mintish;
+    color: white;
+    // @include neonShadow($mintish);
+    
 }
 
-.detailsLink {
+
+
+.detailsLinkLeft {
     text-transform: uppercase;
-    background-color: $red;
+    background-color: $navy;
     font-family: $poppins;
     font-size: 2.25vw;
     color: whitesmoke;
     // @include boxShadow(1px);
     padding: 1vw 2vw;
-    margin: 2.5vw;
+    margin: 0 .75vw 0 0;
     height: 15vw;
-    width: 15vw;
+    width: 25vw;
     display: grid;
     justify-content: center;
     align-items: center;
-    // border-radius: 5px;
+    border-radius: 25px 0 0 25px;
+    
 }    
-.detailsLink:hover{
+.detailsLinkLeft:hover{
+    // background-color: $mintish;
+    color: white;
+    // @include neonShadow($mintish);
+    @include boxShadow(2px);
+}
+.detailsLinkRight {
+    text-transform: uppercase;
+    background-color: $navy;
+    font-family: $poppins;
+    font-size: 2.25vw;
+    color: whitesmoke;
+    // @include boxShadow(1px);
+    padding: 1vw 2vw;
+    margin: 0 0 0 .75vw;
+    height: 15vw;
+    width: 25vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 25px 25px 0;
+    
+}    
+.detailsLinkRight:hover{
     // background-color: $mintish;
     color: white;
     // @include neonShadow($mintish);

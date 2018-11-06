@@ -1,0 +1,98 @@
+.hsContainer {
+    background-color: $black;
+}
+.hs_body_container {
+    position: relative;
+    left: 0;
+    top: 42.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $poppins;
+    // margin-top: -5px;
+    
+    
+    .hsbodyOne {
+        width: 100vw;
+        height: 25vw;
+        clip-path: polygon(0 17vw, 0 0, 100vw 0vw, 100vw 25vw);
+        background-color: $mintish;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        color: $navy;
+        padding: 2.5vw;
+        padding-bottom: 5vw;
+        margin: 0;
+    }
+    
+    .hsback_img_5 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        bottom: 25vw;
+        z-index: 1;
+    }
+    .hsbodyTwo {
+        width: 100vw;
+        height: 25vw;
+        background-color: $mintish;
+        z-index: 2;
+        position: relative;
+        bottom: 30vw;
+        color: $navy;
+        padding: 2.5vw;
+        padding-bottom: 5vw;
+        justify-content: center;
+        align-items: center; 
+        margin: 0;
+        display: grid;
+        grid-template-areas: 'header header' 'left right' 'pic-left pic-right';
+        grid-gap: 2vw;
+    }
+
+    .hsback_img_8 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        bottom: 38vw;
+        z-index: 1;
+    }
+    
+}
+#headers{
+    grid-area: header;
+}
+.subP_one{
+    display: flex;
+    flex-direction: column;
+    grid-area: left;
+    
+}
+.subP_two{
+    display: flex;
+    flex-direction: column;
+    grid-area: right;
+}
+
+h3{
+    font-size: 3vw;
+}
+h4{
+    font-size: 2.5vw;
+}
+p {
+    margin: 2.5vw;
+    font-size: 1.5vw;
+}
+#nraypic{
+    width: 30vw;
+    height: auto;
+    grid-area: pic-left;
+}
+#frankgoodpic{
+    width: 30vw;
+    height: auto;
+    grid-area: pic-right;
+}

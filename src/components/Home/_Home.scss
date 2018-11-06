@@ -1,3 +1,77 @@
-.Home {
-    width: 100vw;
+.homeContainer {
+    background-color: $black;
+}
+.heroLogo{
+    position: relative;
+    top: 12vw;
+    left: 0;
+    z-index: 1;
+    width: 50vw;
+    // @include neonShadow(white);
+}
+
+.home_body_container {
+    position: relative;
+    left: 0;
+    top: 17.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $poppins;
+    // margin-top: -5px;
+    
+    
+    .bodyOne {
+        width: 100vw;
+        height: 25vw;
+        clip-path: polygon(0 17vw, 0 0, 100vw 0vw, 100vw 25vw);
+        background-color: $mintish;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        color: $navy;
+        padding: 2.5vw;
+        padding-bottom: 5vw;
+        margin: 0;
+    }
+    
+    .back_img_6 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        bottom: 25vw;
+        z-index: 1;
+    }
+    .bodyTwo {
+        width: 100vw;
+        height: 20vw;
+        background-color: $mintish;
+        z-index: 2;
+        position: relative;
+        bottom: 30vw;
+        color: $navy;
+        padding: 2.5vw;
+        padding-bottom: 5vw;
+        justify-content: center;
+        align-items: center; 
+        margin: 0;
+    }
+    .back_img_8 {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        bottom: 30vw;
+        z-index: 1;
+    }
+    
+}
+
+h3{
+    font-size: 3vw;
+}
+
+p {
+    margin: 2.5vw;
+    font-size: 2vw;
 }

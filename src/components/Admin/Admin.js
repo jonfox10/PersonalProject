@@ -93,43 +93,48 @@ class Admin extends Component {
                 className='currentPosts'
                 id={post.post_id}
                 key={post.post_id}>
-                <div className='editHeading'>
-                    <h3>POST: {post.post_id} </h3> 
-                    <button 
-                    className='editBtn' 
-                    onClick={ () => {this.handleDelete(post.post_id)}}>
-                    DELETE POST
-                    </button>
-                    <button
-                    className='editBtn'  
-                    onClick={ () => {this.handleEdit(post.post_id)}}>
-                    SAVE CHANGES
-                    </button>
+                <div className='editorTitle'>
+                    <h3 style={{color: 'whitesmoke'}}>EDIT POST</h3>
                 </div>
-                <hr/>
-                <div className='editBody'>
-                    <h3>TITLE:</h3>
-                    <input 
-                        type='text'
-                        className='editTitle'
-                        style={{marginLeft: '5.55vw'}}
-                        value={post.post_title}
-                        // name='post.post_title'
-                        onChange={(e) => 
-                            {this.handleEditChange(index, e.target.value, 'post_title', post.post_id)}}
-                    />
-                    
-                    {/* <p>POST CONTENT: {post.post_content}</p> */}
-                    <h3>CONTENT:</h3>
-                    <textarea 
-                        // name='post.post_content'
+                <div className='editMain'>
+                    <div className='editHeading'>
+                        <h3>POST: {post.post_id} </h3> 
+                        <button 
+                        className='editBtn' 
+                        onClick={ () => {this.handleDelete(post.post_id)}}>
+                        DELETE POST
+                        </button>
+                        <button
+                        className='editBtn'  
+                        onClick={ () => {this.handleEdit(post.post_id)}}>
+                        SAVE CHANGES
+                        </button>
+                    </div>
+                    <hr/>
+                    <div className='editBody'>
+                        <h3>TITLE:</h3>
+                        <input 
+                            type='text'
+                            className='editTitle'
+                            // style={{marginLeft: '5.55vw'}}
+                            value={post.post_title}
+                            // name='post.post_title'
+                            onChange={(e) => 
+                                {this.handleEditChange(index, e.target.value, 'post_title', post.post_id)}}
+                        />
+                        
+                        {/* <p>POST CONTENT: {post.post_content}</p> */}
+                        <h3>CONTENT:</h3>
+                        <textarea 
+                            // name='post.post_content'
 
-                        type='text'
-                        className='editContent'
-                        value={post.post_content}
-                        onChange={(e) => 
-                            {this.handleEditChange(index, e.target.value, 'post_content', post.post_id)}} 
-                    />
+                            type='text'
+                            className='editContent'
+                            value={post.post_content}
+                            onChange={(e) => 
+                                {this.handleEditChange(index, e.target.value, 'post_content', post.post_id)}} 
+                        />
+                    </div>
                 </div>
                 
             </div>
@@ -185,25 +190,27 @@ class Admin extends Component {
                         
                                     <form className='newForm'
                                     onSubmit={this.handleSubmit}>
-                                    <h3>NEW POST TO NEWSFEED PAGE</h3> 
-                                    <input 
-                                            name='post_title'
-                                            className='titleInput'
-                                            type='text'
-                                            value={this.state.post_title}
-                                            onChange={this.handleInputChange}
-                                            placeholder='Post Title...'/>
-                                    <textarea 
-                                            name='post_content'
-                                            className='textArea'
-                                            type='text'
-                                            // rows="10" cols="50"
-                                            wrap='hard'
-                                            value={this.state.post_content}
-                                            onChange={this.handleInputChange}
-                                            placeholder='Post Content...'/>
+                                    <h3 className='newForm_heading'>NEW POST TO NEWSFEED PAGE</h3> 
+                                    <div className='newForm_body'>
+                                        <input 
+                                                name='post_title'
+                                                className='titleInput'
+                                                type='text'
+                                                value={this.state.post_title}
+                                                onChange={this.handleInputChange}
+                                                placeholder='Post Title...'/>
+                                        <textarea 
+                                                name='post_content'
+                                                className='textArea'
+                                                type='text'
+                                                // rows="10" cols="50"
+                                                wrap='hard'
+                                                value={this.state.post_content}
+                                                onChange={this.handleInputChange}
+                                                placeholder='Post Content...'/>
 
-                                    <input type="submit" value="Submit" className='formBtn'/>
+                                        <input type="submit" value="Submit" className='formBtn'/>
+                                    </div>
                                     </form>
 
                                     <div>
@@ -213,7 +220,7 @@ class Admin extends Component {
 
                             ) : (
                                 <div>
-                                    <img style={{width: '30vw', margin: '5vw'}}src='https://media2.giphy.com/media/fR12yitnG7P5S/giphy.webp?cid=3640f6095bdcceeb34394c5641ca6486'/>
+                                    <img style={{width: '40vw', height: '40vw', borderRadius: '50%', border: '12px double red', margin: '5vw', }}src='https://media2.giphy.com/media/fR12yitnG7P5S/giphy.webp?cid=3640f6095bdcceeb34394c5641ca6486'/>
                                     
                                 </div>
                             )
