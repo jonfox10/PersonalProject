@@ -100,12 +100,14 @@ class Admin extends Component {
                     <div className='editHeading'>
                         <h3>POST: {post.post_id} </h3> 
                         <button 
-                        className='editBtn' 
+                        className='formBtn' 
+                        id='clearBtn' 
                         onClick={ () => {this.handleDelete(post.post_id)}}>
                         DELETE POST
                         </button>
                         <button
-                        className='editBtn'  
+                        className='formBtn' 
+                        id='submitBtn' 
                         onClick={ () => {this.handleEdit(post.post_id)}}>
                         SAVE CHANGES
                         </button>
@@ -209,7 +211,7 @@ class Admin extends Component {
                                                 onChange={this.handleInputChange}
                                                 placeholder='Post Content...'/>
 
-                                        <input type="submit" value="Submit" className='formBtn'/>
+                                        <input type="submit" value="Submit" id='submitBtn' className='formBtn'/>
                                     </div>
                                     </form>
 
@@ -227,10 +229,9 @@ class Admin extends Component {
                         }
                 </div>
                 <div>
-                   {/* <Groups /> */}
+                   
                 </div>
 
-                {/* <Footer /> */}
             </div>
 
         )

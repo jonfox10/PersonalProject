@@ -4,7 +4,6 @@
     bottom: 0;
     left: 0;
     height: 6vw;
-    margin-top: 5px;
     
     z-index: 3;
     display: flex;
@@ -22,24 +21,27 @@
     display: grid;
     align-items: center;
     justify-content: center;
-
-    
-
     
 }
+
 #logo {
     width: 6vw;
     fill: $pink;
     justify-items: center;
     align-content: center;
     fill: $pink;
+    filter: drop-shadow( .5px .75px 1px $pink);
+    
 }
-// .btnContainer{
-//     height: 8vw;
-//     padding-right: 5vw;
-//     background-color: transparent;
-
-// }
+#footerLogo {
+    width: 6vw;
+    fill: $pink;
+    justify-items: center;
+    align-content: center;
+    fill: $pink;
+    margin-left: 2vmin;
+    filter: drop-shadow( .5px .75px 1px $pink);
+}
 
 .footerBtn{
     text-decoration: none;
@@ -49,6 +51,7 @@
     font-family: $poppins;
     font-size: 2vw;
     font-weight: bold;
+    margin-left: 2vmin;
 }
 
 .footerBtn:hover{
@@ -66,9 +69,22 @@
     height: 6vw;
     background-color: $red;
     z-index: -1;
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-   
+}
 
+@media (width: 375px){
+    .footer {
+        width: 100vw;
+        position: absolute; 
+        bottom: 0;
+        left: 0;
+        height: 5vh;
+        // margin-top: -35px;
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $red;
+    
+       
+    }
 }

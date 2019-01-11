@@ -14,7 +14,9 @@
     
 }
 
-
+.newsfeedPageBody {
+    width: 100vw;
+}
 .newsHeader {
     position: absolute;
     top: 0;
@@ -40,7 +42,7 @@
     text-align: center;
     align-content: center;
     opacity: 1;
-    font-size: 11vw;
+    font-size: 12vmin;
     font-weight: bold;
     padding: 1vw;
     @include boxShadow(0px);
@@ -49,31 +51,6 @@
 }
 
 .newsBody{
-    // position: relative;
-    // margin: 36vw 5vw 5vw 5vw;
-    // width: 90vw;
-    // // background: radial-gradient($gray 0%, #001242CC 100%);
-    // z-index: 3;
-    // border-radius: 10px;
-    // @include boxShadow(8px);
-    // // display: flex;
-    // // flex-direction: column;
-    // // justify-content: space-between;
-    // // align-items: center;
-    // display: flex;
-    // flex-flow: row wrap;
-    // justify-content: space-evenly;
-    // align-items: center;
-    // align-content: space-around;
-    // padding-bottom: 3vw;
-
-    // // background-color: $color1;
-    // // background-image: 
-    // // linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2), linear-gradient(30deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(150deg, $color2 12%, transparent 12.5%, transparent 87%, $color2 87.5%, $color2),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3),linear-gradient(60deg, $color3 25%, transparent 25.5%, transparent 75%, $color3 75%, $color3);
-    // // background-repeat: repeat;
-    // // radial-gradient($color2-1 9px, transparent 10px),        
-    // // repeating-radial-gradient($color2-1 0, $color2-1 4px, transparent 5px, transparent 20px, $color2-1 21px, $color2-1 25px, transparent 26px, transparent 50px);
-    // background-color: whitesmoke;
     position: relative;
     top: 0;
     left: 0;
@@ -98,7 +75,7 @@
     // // border-bottom: .25vw ridge $mintish;
     // border: 1vw solid #00124260;
     border-top: none;
-    font-family: $poppins;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -110,12 +87,15 @@
     // @include boxShadow(1px);
     
     .newsTitle{
-        font-family: $poppins;
-        font-size: 3vw;
+        font-family: $bungee;
+        font-size: 5vmin;
         min-height: 8vw;
-
         font-weight: bold;
-        color: whitesmoke;  
+        color: whitesmoke;
+        // background-image: radial-gradient($navy 0%, $red 100%);
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;  
         text-transform: uppercase;
         background-color: $navy;
         width: 75vw;
@@ -125,20 +105,7 @@
         text-align: left;
         border-radius: 0px 025px 0px 0px;
         border: 1vw solid #001242;
-    
-        
-        // @include boxShadow(1px);
 
-
-
-    }
-    .newsLine {
-        background-color: $gray;
-        width: 95vw;
-        border: none;
-        position: relative;
-        top: 1.5vw;
-        height: 1vw;
     }
     .newsPostP {
         width: 75vw;
@@ -152,64 +119,16 @@
         word-spacing: .05vw;
         // height: 10vw;
         overflow: hidden;
-        font-size: 1.5vw;
+        font-size: 2.5vmin;
         
     }
 
 }
 
-// @media(max-width: 800px) {
-//     .newsPost {
-//         width: 85vw;
-//         height: auto;
-//         // padding: 5vw 5vw 2vw 5vw;
-//         background-color: #FFFFFFE6;
-//         border-radius: 10px 10px 0px 0px;
-//         border-bottom: .25vw ridge $mintish;
-//         border-top: none;
-//         font-family: $poppins;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-evenly;
-//         align-items: center;
-//         align-content: space-around;
-//         margin: 5vw 1vw 0 1vw;
-        
-        
-//         @include boxShadow(1px);
-        
-//         .newsTitle{
-//             font-family: $poppins;
-//             font-size: 2vw;
-//             font-weight: bold;
-//             color: whitesmoke;  
-//             text-transform: uppercase;
-//             // letter-spacing: .25vw;
-//             background-color: $navy;
-//             width: 75vw;
-//             border-radius: 10px;
-//             border-bottom: .15vw solid $mintish;
-//             position: relative;
-//             margin: -2.5vw;
-//             padding: 1.5vw;
-//             text-align: center;
-            
-//             @include boxShadow(1px);
-    
-    
-    
-//         }
-        
-//     }
-    // .newsPostP {
-    //     font-family: sans-serif;
-    //     text-transform: capitalize;
-    //     text-align: left !important;
-    //     text-indent: 5vw;
-    //     padding: 4vw 2vw;
-    //     word-spacing: .05vw;
-    //     max-height: 10vw;
-    //     overflow: auto;
-    //     font-size: 1.5vw;
-        
-    // }
+
+//meadia query for iphone X 
+@media(width: 375px) and (height: 812px) {
+    .newsBody {
+        margin-bottom: 7.5vh;
+    }
+}

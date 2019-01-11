@@ -19,7 +19,7 @@ export default class Footer extends Component {
                 <div className='footer' >
                     <div  
                         className='footerLogo'>
-                        <object type='image/svg+xml' data={logo} id='logo' src={logo} alt='cyn of utah logo'>
+                        <object type='image/svg+xml' data={logo} id='footerLogo' src={logo} alt='cyn of utah logo'>
                         </object>
                     </div>
                     <div className='btnContainer'>

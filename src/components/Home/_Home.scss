@@ -1,77 +1,128 @@
 .homeContainer {
     background-color: $black;
 }
+
 .heroLogo{
-    position: relative;
+    position: absolute;
     top: 12vw;
-    left: 0;
-    z-index: 1;
-    width: 50vw;
-    // @include neonShadow(white);
+    // left: 50%;
+
+    z-index: 2;
+    width: 100vw;
+    filter: drop-shadow(2.5px 2.5px 2.5px rgba(0, 0, 0, 0.5));
+    
 }
 
 .home_body_container {
     position: relative;
     left: 0;
-    top: 17.8vw;
+    // top: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: $poppins;
+    // font-family: $poppins;
     // margin-top: -5px;
     
     
     .bodyOne {
         width: 100vw;
-        height: 25vw;
-        clip-path: polygon(0 17vw, 0 0, 100vw 0vw, 100vw 25vw);
-        background-color: $mintish;
+        // clip-path: polygon(0 15vw, 0 0, 100vw 0vw, 100vw 20vw);
+        background-image: linear-gradient(top, $navy 0%, $red 100%);
         z-index: 3;
-        top: 0;
-        left: 0;
-        color: $navy;
+        // top: 0;
+        // left: 0;
+        color: whitesmoke;
         padding: 2.5vw;
-        padding-bottom: 5vw;
+        // padding-bottom: 5vw;
         margin: 0;
+        box-shadow: inset -0px -0px 60.5px -15px $pink;
+
+        h3{
+            font-size: 8vmin;
+            font-family: $monton;
+            color: whitesmoke;
+            background-image: url('./media/pproject_files/pproject_3.jpg');
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1vmin;
+            filter: drop-shadow( -.1vmin .2vmin 0px $pink)       
+        }
+        p {
+            margin: 2.5vw;
+            font-size: 3vmin;
+        }
+    }
+    .imageContainer {
+        background-image: url('./media/pproject_files/pproject_6.jpg');
+        background-position: center;
+        position: relative;
+        // padding: 20vh;
+        width: 100vw;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+        position: relative;
+        padding: 15vmin;
+        width: 100vw;
     }
     
-    .back_img_6 {
-        width: 100vw;
-        height: auto;
-        position: relative;
-        bottom: 25vw;
-        z-index: 1;
-    }
     .bodyTwo {
         width: 100vw;
-        height: 20vw;
-        background-color: $mintish;
-        z-index: 2;
-        position: relative;
-        bottom: 30vw;
-        color: $navy;
+        background-image: linear-gradient(top, $navy 0%, $red 100%);      
+        z-index: 5;
+        color: whitesmoke;
         padding: 2.5vw;
-        padding-bottom: 5vw;
+        // padding-bottom: 5vw;
         justify-content: center;
         align-items: center; 
-        margin: 0;
+        // margin: 0;
+        box-shadow: inset -0px -0px 60.5px -15px $pink;
+
+        h3{
+            font-size: 8vmin;
+            font-family: $monton;
+            color: whitesmoke;
+            // text-shadow: #e0e0e0 1px 1px 0;
+            background-image: url('./media/pproject_files/pproject_3.jpg');
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: .5vmin;
+            filter: drop-shadow(-.1vmin .2vmin 0px $pink)
+        }
+        p {
+            margin: 2.5vw;
+            font-size: 3vmin;
+        }
     }
     .back_img_8 {
-        width: 100vw;
-        height: auto;
+        background-image: url('./media/pproject_files/pproject_7.jpg');
+        background-position: 0 32%;
+        background-size: 100vw;
+        background-repeat: no-repeat;
         position: relative;
-        bottom: 30vw;
-        z-index: 1;
+        padding: 15vmin;
+        width: 100vw;
+        
     }
     
 }
+@media (width: 375px){
+    .back_img_8 {
+        // margin-bottom: -50px;
+        height: 20vh;
+    }
+    // .home_body_container {
+    //     margin-top: -60px;
+    // }
+    .homeContainer {
+        background-color: $black;
+        // position: relative;
+        width: 100vw;
+        // height: 100vh;
+    }
 
-h3{
-    font-size: 3vw;
 }
 
-p {
-    margin: 2.5vw;
-    font-size: 2vw;
-}
+

@@ -1,10 +1,47 @@
 .hsContainer {
     background-color: $black;
 }
+
+.hsHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    // background-image: linear-gradient( #FF52D9,#FF52D900);
+    z-index: 1; 
+    width: 100vw;
+    height: 40vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: $poppins;
+} 
+#hsHeader {
+    font-family: $poppins;
+    color: whitesmoke;
+    border: 2vw solid whitesmoke;
+    display: grid;
+    text-align: center;
+    align-content: center;
+    opacity: 1;
+    font-size: 11vw;
+    font-weight: bold;
+    padding: 1vw;
+    @include boxShadow(0px);
+    @include textShadow(13px, 0.5)
+
+}
+
+
+
+
 .hs_body_container {
     position: relative;
     left: 0;
-    top: 42.8vw;
+    // top: 42.8vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,41 +52,133 @@
     
     .hsbodyOne {
         width: 100vw;
-        height: 25vw;
-        clip-path: polygon(0 17vw, 0 0, 100vw 0vw, 100vw 25vw);
-        background-color: $mintish;
+        background-image: linear-gradient(top, $navy 0%, $mintish 100%);
         z-index: 3;
-        top: 0;
-        left: 0;
-        color: $navy;
-        padding: 2.5vw;
-        padding-bottom: 5vw;
+        color: whitesmoke;
+        padding: 2.5vmin;
+        // padding-bottom: 5vw;
         margin: 0;
+        box-shadow: inset -0px -0px 120px -15px $red;
+
+        h3{
+            font-size: 5vmin;
+            font-family: $monton;
+            color: whitesmoke;
+            letter-spacing: .5vmin;
+            filter: drop-shadow( -.1vmin .2vmin 0px #92DCE590)       
+        }
+        p {
+            margin: 2.5vmin 5vmin;
+            font-size: 3vmin;
+        }
     }
     
     .hsback_img_5 {
-        width: 100vw;
-        height: auto;
+        background-image: url('./media/pproject_files/pproject_11.jpg');
+        background-position: 0 50%;
+        background-size: 100vw;
+        background-repeat: no-repeat;
         position: relative;
-        bottom: 25vw;
-        z-index: 1;
+        padding: 20vmin;
+        width: 100vw;
+        @include boxShadow(10px);
     }
     .hsbodyTwo {
         width: 100vw;
-        height: 25vw;
-        background-color: $mintish;
-        z-index: 2;
-        position: relative;
-        bottom: 30vw;
-        color: $navy;
-        padding: 2.5vw;
-        padding-bottom: 5vw;
-        justify-content: center;
-        align-items: center; 
-        margin: 0;
-        display: grid;
-        grid-template-areas: 'header header' 'left right' 'pic-left pic-right';
-        grid-gap: 2vw;
+        background-image: linear-gradient(top, $mintish 0%, $navy 100%);
+        z-index: 3;
+        color: whitesmoke;
+
+        padding: 2.5vmin;
+        // padding-bottom: 5vw;
+        // margin: 0;
+        box-shadow: inset -0px -0px 150px -15px $red;
+        // border: 2px solid red;
+
+        h3{
+            font-size: 8vmin;
+            font-family: $monton;
+            color: whitesmoke;
+            margin: 2.5vmin;
+            letter-spacing: .5vmin;
+            filter: drop-shadow( -.2vmin .3vmin 0px #92DCE590)       
+        }
+        .featuringCards {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center; 
+            padding: 2.5vmin 0 0 0;
+            // margin: 0 5vmin;
+            
+            .cardInfo {
+                // height: 35%;
+                // border: 2px solid red;
+                margin: 1vmin;
+            }
+            h4 {
+                // padding-top: 1vmin;
+                font-size: 2.75vmin;
+                font-family: $poppins;
+                text-transform: uppercase;
+                white-space: pre-wrap;
+                word-spacing: 2px;
+
+            }
+            p {
+                text-align: left;
+                vertical-align: text-top;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: .5vmin;
+                padding: 2vmin;
+                padding-top: .5vmin;
+                font-size: 2.25vmin;
+            }
+            
+            
+            .subP_one{
+                position: relative;
+                background-color: whitesmoke;
+                color: $navy;
+                width: 42.5vw;
+                height: 50vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px 0;
+                @include boxShadow(2px);
+                
+                
+                #frankgoodpic{
+                    width: 42.5vw;
+                    height: 30vw;
+                    border-radius: 10px 0 0 0;
+                    object-fit: cover;
+                    object-position: center 65%;
+                    
+                }
+            }
+            .subP_two{
+                position: relative;
+                background-color: whitesmoke;
+                color: $navy;
+                width: 42.5vw;
+                height: 50vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 0px 10px;
+                @include boxShadow(2px);
+                
+                #nraypic{
+                    width: 42.5vw;
+                    height: 30vw;
+                    border-radius: 0px 10px 0 0;
+                    object-fit: cover;
+                    object-position: center 20%;
+                }
+            }
+        }
+
     }
 
     .hsback_img_8 {
@@ -64,35 +193,120 @@
 #headers{
     grid-area: header;
 }
-.subP_one{
-    display: flex;
-    flex-direction: column;
-    grid-area: left;
+
+
+
+@media (min-width: 1300px) {
+    #hsHeader {
+        opacity: 0;
     
+    }
+    .hs_body_container {
+            bottom: 15vh;
+        
+        .hsbodyTwo {
+
+          padding-bottom: 10vmin;
+          margin-bottom: -15vmin;
+            .featuringCards {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center; 
+                // padding: 2.5vmin 0 0vmin 0;
+                // margin: 0 5vmin;
+                
+                .cardInfo {
+                    height: 25vh;
+                    margin: 1vmin;
+                }
+                h4 {
+                    font-size: 5vmin;
+                    font-family: $poppins;
+                    text-transform: uppercase;
+                    white-space: pre-wrap;
+                    word-spacing: 2px;
+
+                }
+                p {
+                    text-align: left;
+                    vertical-align: text-top;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin: .5vmin;
+                    padding: 2vmin;
+                    padding-top: .5vmin;
+                    font-size: 3.5vmin;
+                }
+                
+                
+                .subP_one{
+                    position: relative;
+                    background-color: whitesmoke;
+                    color: $navy;
+                    width: 40vw;
+                    height: 40vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 10px 0;
+                    @include boxShadow(2px);
+                    
+                    
+                    #frankgoodpic{
+                        width: 40vw;
+                        height: 25vw;
+                        border-radius: 10px 0 0 0;
+                        object-fit: cover;
+                        object-position: center 65%;
+                        
+                    }
+                }
+                .subP_two{
+                    position: relative;
+                    background-color: whitesmoke;
+                    color: $navy;
+                    width: 40vw;
+                    height: 40vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 0px 10px;
+                    @include boxShadow(2px);
+                    
+                    #nraypic{
+                        width: 40vw;
+                        height: 25vw;
+                        border-radius: 0px 10px 0 0;
+                        object-fit: cover;
+                        object-position: center 20%;
+                    }
+                }
+            }
+        }
+    }
+
 }
-.subP_two{
-    display: flex;
-    flex-direction: column;
-    grid-area: right;
+//media query for iphone x
+@media (width: 375px) and (height: 812px) {
+    .hsContainer {
+        background-color: $black;
+        
+    }
+    .hsbodyTwo {
+        height: 42vh;
+        // padding-bottom: 10vh;
+        
+    }
 }
 
-h3{
-    font-size: 3vw;
-}
-h4{
-    font-size: 2.5vw;
-}
-p {
-    margin: 2.5vw;
-    font-size: 1.5vw;
-}
-#nraypic{
-    width: 30vw;
-    height: auto;
-    grid-area: pic-left;
-}
-#frankgoodpic{
-    width: 30vw;
-    height: auto;
-    grid-area: pic-right;
+//media query for iphone 6/7/8
+@media (width: 375px) and (height: 667px) {
+    .hsContainer {
+        background-color: $black;
+        
+    }
+    .hsbodyTwo {
+        height: 47vh;
+        // padding-bottom: 10vh;
+        
+    }
 }

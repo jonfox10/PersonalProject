@@ -36,7 +36,7 @@ class Newsfeed extends Component {
         
 
         return (
-            <div>
+            <div className="newsfeedPageBody">
                 <div className='imageStyle'>
                     <img src={newsPic} alt='CYN Leaders'/>
         

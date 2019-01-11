@@ -87,7 +87,7 @@ class Registration extends Component {
     render() {
 
         return (
-            <div>
+            <div className='regPage'>
                 <div className='regImage'>
                     <img src={regPic} alt='CYN Leaders'/>
         
@@ -166,17 +166,19 @@ class Registration extends Component {
                                 onChange={this.handleInputChange}/>    
                         </div>   */}
                         <div className='btnContainer'>
-                        <button
-                        className='formBtn'
-                        onClick={this.submitHandler} 
-                        >SUBMIT</button>
+                            <button
+                            className='formBtn'
+                            id='submitBtn'
+                            onClick={this.submitHandler} 
+                            >SUBMIT</button>
 
-                        {/* <a href='http://localhost:6000/auth/logout'>
-                        <button>LOGOUT</button>
-                    </a> */}
-                        <button 
-                        className='formBtn'
-                        onClick={this.handleCancel}>CLEAR FORM</button>
+                            {/* <a href='http://localhost:6000/auth/logout'>
+                            <button>LOGOUT</button>
+                        </a> */}
+                            <button 
+                            className='formBtn'
+                            id='clearBtn'
+                            onClick={this.handleCancel}>CLEAR FORM</button>
                         </div>
                     </form>
 
@@ -184,7 +186,7 @@ class Registration extends Component {
                         <Link to='/hs' style={{textDecoration: 'none'}}><div className='detailsLinkLeft'>
                         <p>HS FALL FLING DETAILS AND RESOURCES</p>
                         </div></Link>
-                        <Link to='/jh' style={{textDecoration: 'none'}}><div className='detailsLinkRight'>
+                        <Link to='' style={{textDecoration: 'none'}}><div className='detailsLinkRight'>
                         JH SPRING FLING DETAILS AND RESOURCES
                         </div>
                         </Link>

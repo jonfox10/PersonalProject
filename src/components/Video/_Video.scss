@@ -1,25 +1,103 @@
-.videoOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40vw;
-    width: 100%;
-    background-image: linear-gradient( rgba(3, 3, 3, 0.5),#0B0E0F00);
-  
-}
 
 .videoStyle {
-    position: absolute;
-    width: 100vw;
-    height: auto;
-    top: -6.3vw;
+    position: relative;
+    top: 0;
     left: 0;
     background-color: black;
+    // padding-bottom: 30vmin;
+    z-index: 1;
+    margin-bottom: -3px;
+    
 }
+.videoStyleHS {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: black;
+    // padding-bottom: 30vmin;
+    z-index: 1;
+    margin-top: -12vh;
+    background-image: url('./media/pproject_files/pproject_12.jpg');
+
+    
+}
+
 video{
-    width: 100vw;
+    width: 100vw !important;
+    // height: auto !important;
+    // clip-path: inset(0 0 10vmin 0);
 }
 
 // video.vsc-initialized {
 //     width: 100vw;
 // }
+
+
+
+@media (max-width: 1300px){
+    .videoStyle {
+    background-image: url('./media/pproject_files/pproject_10.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    width: 100vw;
+    height: auto;
+    padding: 28vw 0;
+    top: 0;
+    // left: 2.5vw;
+    }
+    video{
+    display: none;
+    }
+    #videoSource{
+        display: none;
+    }
+    .videoStyleHS {
+        background-image: url('./media/pproject_files/pproject_12.jpg');
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        width: 100vw;
+        height: auto;
+        padding: 28vw 0;
+        top: 0;
+    }
+
+}
+
+@media (width: 375px){
+    .videoStyle {
+    position: relative;
+    // width: 100vw;
+    // height: auto;
+    top: -2vh;
+    left: 0;
+    background-color: black;
+    // padding-bottom: 30vmin;
+    z-index: 1;
+    margin-bottom: -2vh;
+        video{
+        display: none;
+        }
+        #videoSource{
+            display: none;
+        }
+    
+    }
+    .videoStyleHS {
+        position: relative;
+    // width: 100vw;
+    // height: auto;
+    top: -2vh;
+    left: 0;
+    background-color: black;
+    // padding-bottom: 30vmin;
+    z-index: 1;
+    margin-bottom: -2vh;
+        video{
+        display: none;
+        }
+        #videoSource{
+            display: none;
+        }
+        
+    }
+}

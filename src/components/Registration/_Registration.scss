@@ -1,5 +1,11 @@
+.regPage {
+    width: 100vw;
+
+}
+
 .regImage{
     @include heroImage(auto);
+
 }
 
 .regHeader {
@@ -11,14 +17,14 @@
 }
 
 .rsvp_header {
-    font-family: $poppins;
-    font-size: 3.5vw;
+    font-family: $bungee;
+    font-size: 6vmin;
     min-height: 10vw;
     font-weight: bold;
     color: whitesmoke;  
     text-transform: uppercase;
     background-color: $navy;
-    width: 80vw;
+    width: 70vw;
     position: relative;
     margin-bottom: .75vw;
     // padding: 1vw;
@@ -30,11 +36,27 @@
     border: 1vw solid #001242;
 }
 .regBody {
-    @include pageBody();
+    // @include pageBody();
+    width: 80vw;
+    position: relative;
+    overflow: scroll;
+    top: 0;
+    left: 0;
+    margin: 50vmin auto 5vmin auto;
+    // width: 90vw;
+    background-color: whitesmoke;
+    z-index: 3;
+    border-radius: 20px;
+    @include boxShadow(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 0;
 }
     
 .newReg {
-    width: 80vw;
+    width: 70vw;
     border-radius: 0px 0px 025px 0px;
     border: .75vw solid #001242;
     padding: 2.5vw 0;
@@ -82,23 +104,38 @@
 .btnContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: space-evenly;
 }
 .formBtn {
     text-transform: uppercase;
-    background-color: white;
+    background-color: transparent;
     font-family: $poppins;
     font-size: 1.5vw;
     color: $red;
+    border: 2px solid $red;
     // @include boxShadow(1px);
     // padding: .5vw 2vw;
-    margin: 2.5vw 0 0 0;
-    // border-radius: 5px;
+    margin: 2.5vmin 2vmin;
+    border-radius: 5px;
 }    
-.formBtn:hover{
+#submitBtn:hover {
+    border: 2px solid $mintish;
     background-color: $mintish;
+    // border: 2px solid $mintish;
+    @include neonShadow($mintish);
+}
+#clearBtn:hover {
+    border: 2px solid red;
+    background-color: red;
+    // border: 2px solid $mintish;
+    @include neonShadow(red);
+
+}
+.formBtn:hover{
+    
     color: white;
-    // @include neonShadow($mintish);
+    // 
     
 }
 
@@ -151,37 +188,29 @@
     @include boxShadow(2px);
 }
 
+@media (max-width: 350px){
+    .regBody {
+        margin: auto;
+        margin-top: 500px;
+    }
+}
+@media (max-width: 480px){
+    .regBody {
+        margin: auto;
+        margin-top: 20vw;
+    }
+}
+@media (width: 375px) and (height:812px){
+    .regBody {
+        margin: auto;
+        margin-top: -15vw;
+    }
+}
 
-        //     .textArea {
-            //         width: 50vw;
-            //         font-size: 1.5vw;
-            //         border: none;
-            //         border-bottom: 2px solid $red;
-            //         border-radius: 10px 10px 0 0;
-//         margin: 2.5vw;
-//         height: 3vw;
-//     }
-//     .textArea:focus{
-//         outline: none;
-//         border-bottom: 4px solid $mintish;
-//         background: rgba(146, 219, 229, 0.30);
-//         min-height: 10vw;
-//     }
-
-//     .formBtn {
-//         text-transform: uppercase;
-//         background-color: white;
-//         font-family: $poppins;
-//         font-size: 1.5vw;
-//         color: $red;
-//         @include boxShadow(1px);
-//         padding: .5vw 2vw;
-//         margin: 2.5vw;
-//         border-radius: 5px;
-//     }    
-//     .formBtn:hover{
-//         background-color: $mintish;
-//         color: white;
-//         // @include neonShadow($mintish);
-        
-//     }
+@media (min-width: 550px){
+    .regBody {
+        margin: auto;
+        margin-top: 55vw;
+        margin-bottom: 5vmin;
+    }
+}

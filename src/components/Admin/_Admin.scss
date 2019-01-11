@@ -261,6 +261,7 @@
     border: none;
     border-bottom: 1px solid $red;
     margin: 1vw;
+    background-color: whitesmoke;
 
 }
 
@@ -271,13 +272,15 @@
 }
 
 .editContent {
-    min-height: 5vw;
+    min-height: 20vmin;
     border-radius: 10px 10px 0 0;
     width: 50vw;
     font-size: 1.5vw;
     border: none;
     border-bottom: 1px solid $red;
     margin: 1vw;
+    resize: none;
+    background-color: whitesmoke;
 
 }
 
