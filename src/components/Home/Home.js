@@ -24,7 +24,7 @@ export default function Home() {
                 {/* ./../../media/pproject_files/pproject_6.jpg */}
                 </div>
                 <div className='bodyTwo'>
-                    <h3>HOW DO I GET ENVOLVED?</h3>
+                    <h3>HOW DO I GET INVOLVED?</h3>
                     <p>Join us for our first annual High School Fall Fling Event; a gathering of youth from all over Utah, hosted by the Christian Youth Network of Utah, coming together for an overnight experience of fun, food, worship, learning and fellowship. *We now host separate HS-only and JH-only Events. Our JH Spring Fling event is scheduled for March 29, 2019. Go to the News page of this site to see the latest information of when and where we are meeting.</p>
                 </div>
 
